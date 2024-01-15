@@ -1,0 +1,16 @@
+********1-Afficher la date System************ 
+SQL> SELECT SYSDATE FROM DUAL;
+
+SYSDATE
+--------
+06/01/24
+*******2-Afficher la date Systeme sous  le format  Lundi 08 janvier 2024*************
+
+SQL> SELECT TO_CHAR(SYSDATE, 'Day DD Month YYYY') AS "Date système" FROM DUAL;
+
+Date système
+-----------------------------------------------------------------------------
+Samedi   06 Janvier   2024
+SELECT LAST_NAME, HIRE_DATE
+  2  from  EMPLOYEES where TO_CHAR(HIRE_DATE,'MM')='01'
+  3  ORDER BY HIRE_DATE FETCH FIRST 2 ROWS ONLY;
